@@ -1,0 +1,61 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "./generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Set{
+  id String @id
+  name String
+  cards Card[]
+}
+
+model Card {
+  id String @id
+  collectorNumber Int
+  name String
+  description String
+  type String
+  rarity String
+  faction String
+  flavorText String?
+  keywords Keyword[]
+  tags Tag[]
+
+  // Card Set
+  set Set @relation(fields: [setId], references:[id])
+  setId String
+
+  // Card Stats
+  energy Int?
+  might Int?
+  cost Int?
+  power Int?
+
+  // CardArt
+  thumbnailURL String?
+  fullURL String?
+  artist String?
+}
+
+model Keyword{
+  id Int @id @default(autoincrement())
+  name String
+  card Card @relation(fields: [cardId], references: [id])
+  cardId String
+}
+
+model Tag {
+  id Int @id @default(autoincrement())
+  name String
+  card Card @relation(fields: [cardId], references: [id])
+  cardId String
+}

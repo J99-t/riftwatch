@@ -1,17 +1,75 @@
-# 👁️ Riftwatch
+# Nuxt Minimal Starter
 
-## Project overview 
-Riftwatch serves as a website for both players and collectors to:
-- Manage Portfolios: Track and manage card collections with current prices
-- Market Watch: Links card prices spikes and dips based on tournament results and meta shifts
-- Smart Alerts: Notifying downtrends for optimal time to purchase watchlisted cards
-- Deck Completion Cost: Instantly calculate the real-time cost to finish any deck by identifying specific gaps
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## ⚙️ Tech Stack
-- Framework: Nuxt
-- Database & ORM: Prisma SQLite
-- Data Sourcing Riot Games
-- Styling Tailwind CSS
+## Setup
 
-### 🗺️ Future Roadmap
-Watcher Intelligence (AI): Context aware rule clarification bot based on the 65+ page Riftbound Rules
+Make sure to install dependencies:
+
+```bash
+# npm
+npm install
+
+# pnpm
+pnpm install
+
+# yarn
+yarn install
+
+# bun
+bun install
+```
+
+## Development Server
+
+Start the development server on `http://localhost:3000`:
+
+```bash
+# npm
+npm run dev
+
+# pnpm
+pnpm dev
+
+# yarn
+yarn dev
+
+# bun
+bun run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+# npm
+npm run build
+
+# pnpm
+pnpm build
+
+# yarn
+yarn build
+
+# bun
+bun run build
+```
+
+Locally preview production build:
+
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
